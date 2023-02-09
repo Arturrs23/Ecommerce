@@ -4,13 +4,13 @@ import Login from "../views/Login.vue";
 import Dashboard from "../views/Dashboard.vue";
 import Products from "../views/Products/Products.vue";
 import Users from "../views/Users/Users.vue";
-// import Customers from "../views/Customers/Customers.vue";
+import Customers from "../views/Customers/Customers.vue";
 // import CustomerView from "../views/Customers/CustomerView.vue";
 // import Orders from "../views/Orders/Orders.vue";
 // import OrderView from "../views/Orders/OrderView.vue";
 import Request from "../views/Request-password.vue";
 import Reset from "../views/Reset-password.vue";
-// import NotFound from "../views/NotFound.vue";
+import NotFound from "../views/NotFound.vue";
 import store from "../store";
 // import Report from "../views/Reports/Report.vue";
 // import OrdersReport from "../views/Reports/OrdersReport.vue";
@@ -49,11 +49,11 @@ const routes = [
         name: 'app.users',
         component: Users
       },
-    //   {
-    //     path: 'customers',
-    //     name: 'app.customers',
-    //     component: Customers
-    //   },
+      {
+        path: 'customers',
+        name: 'app.customers',
+        component: Customers
+      },
     //   {
     //     path: 'customers/:id',
     //     name: 'app.customers.view',
@@ -115,11 +115,11 @@ const routes = [
       requiresGuest: true
     }
   },
-//   {
-//     path: '/:pathMatch(.*)',
-//     name: 'notfound',
-//     component: NotFound,
-//   }
+  {
+    path: '/:pathMatch(.*)',
+    name: 'notfound',
+    component: NotFound,
+  }
 ];
 
 const router = createRouter({

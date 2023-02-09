@@ -15,12 +15,13 @@
             <div class="flex-shrink-0">
               <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" />
             </div>
+            <!-- menu items -->
             <router-link :to="{name: 'app.dashboard'}"
             class="flex items-center p-2 rounded transition-colors hover:bg-black/30">
  <span class="mr-2 text-gray-300">
    <HomeIcon class="w-5"/>
  </span>
- <span class="text-xs">
+ <span class="text-xl">
    Dashboard
  </span>
 </router-link>
@@ -29,7 +30,7 @@
       <span class="mr-2 text-gray-300">
         <HomeIcon class="w-5"/>
       </span>
-      <span class="text-xs">
+      <span class="text-xl">
      Products
       </span>
     </router-link>
@@ -38,10 +39,19 @@
       <span class="mr-2 text-gray-300">
         <HomeIcon class="w-5"/>
       </span>
-      <span class="text-xs">
+      <span class="text-xl">
       Users
       </span>
     </router-link>
+    <router-link :to="{name: 'app.customers'}"
+    class="flex items-center p-2 rounded transition-colors hover:bg-black/30">
+<span class="mr-2 text-gray-300">
+<HomeIcon class="w-5"/>
+</span>
+<span class="text-xl">
+Customers
+</span>
+</router-link>
           </div>
           <div class="hidden md:block">
             <div class="ml-4 flex items-center md:ml-6">
