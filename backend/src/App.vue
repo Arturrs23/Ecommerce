@@ -6,9 +6,6 @@
 <template>
 <!-- displaying the views  -->
 <router-view></router-view>
-
-
-
 </template>
 
 

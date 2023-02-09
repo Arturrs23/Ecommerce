@@ -1,11 +1,4 @@
-      <!-- The component uses the defineProps function to define the props, in this case just a title -->
-      <script setup>
-    
-
-      const {title} = defineProps({
-        title: String
-      })
-    </script>
+  
 <template>
     <!-- This is a template component for a centered container -->
     <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -19,10 +12,18 @@
           </h2>
         </div>
         <!-- The slot component allows any content to be inserted into the component -->
-        <slot></slot>
+        
+          <slot></slot>
+
+      
       </div>
     </div>
   </template>
-<style scoped>
-  </style>
-  
+    <!-- The component uses the defineProps function to define the props, in this case just a title -->
+      <script setup>
+    
+
+      const {title} = defineProps({
+        title: String
+      })
+    </script>

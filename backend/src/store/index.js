@@ -5,9 +5,12 @@ import { createStore } from "vuex";
 const store = createStore(
     // Define the store's state, getters, actions, and mutations
     {
-        state: {
-            test: '123'
-        },
+       state:{
+        user: {
+            token: '1234',
+            data: {}
+        }
+       },
         getters: {
             // Add getters here if needed
         },
