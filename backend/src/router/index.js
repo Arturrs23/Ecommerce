@@ -12,7 +12,7 @@ import Request from "../views/Request-password.vue";
 import Reset from "../views/Reset-password.vue";
 import NotFound from "../views/NotFound.vue";
 import store from "../store";
-// import Report from "../views/Reports/Report.vue";
+import Reports from "../views/Reports/Reports.vue";
 // import OrdersReport from "../views/Reports/OrdersReport.vue";
 // import CustomersReport from "../views/Reports/CustomersReport.vue";
 
@@ -54,41 +54,41 @@ const routes = [
         name: 'app.customers',
         component: Customers
       },
-    //   {
-    //     path: 'customers/:id',
-    //     name: 'app.customers.view',
-    //     component: CustomerView
-    //   },
-    //   {
-    //     path: 'orders',
-    //     name: 'app.orders',
-    //     component: Orders
-    //   },
-    //   {
-    //     path: 'orders/:id',
-    //     name: 'app.orders.view',
-    //     component: OrderView
-    //   },
-    //   {
-    //     path: '/report',
-    //     name: 'reports',
-    //     component: Report,
-    //     meta: {
-    //       requiresAuth: true
-    //     },
-    //     children: [
-    //       {
-    //         path: 'orders/:date?',
-    //         name: 'reports.orders',
-    //         component: OrdersReport
-    //       },
-    //       {
-    //         path: 'customers/:date?',
-    //         name: 'reports.customers',
-    //         component: CustomersReport
-    //       }
-    //     ]
-    //   },
+      // {
+      //   path: 'customers/:id',
+      //   name: 'app.customers.view',
+      //   component: CustomerView
+      // },
+      // {
+      //   path: 'orders',
+      //   name: 'app.orders',
+      //   component: Orders
+      // },
+      // {
+      //   path: 'orders/:id',
+      //   name: 'app.orders.view',
+      //   component: OrderView
+      // },
+      {
+        path: '/reports',
+        name: 'app.reports',
+        component: Reports,
+        meta: {
+          requiresAuth: true
+        },
+        children: [
+          // {
+          //   path: 'orders/:date?',
+          //   name: 'reports.orders',
+          //   component: OrdersReport
+          // },
+          // {
+          //   path: 'customers/:date?',
+          //   name: 'reports.customers',
+          //   component: CustomersReport
+          // }
+        ]
+      },
     ]
   },
   {
@@ -107,6 +107,14 @@ const routes = [
       requiresGuest: true
     }
   },
+  // {
+  //   path: '/reports',
+  //   name: 'reports',
+  //   component: Request,
+  //   meta: {
+  //     requiresGuest: true
+  //   }
+  // },
   {
     path: '/reset-password/:token',
     name: 'reset',
